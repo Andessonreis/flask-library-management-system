@@ -20,3 +20,16 @@ class UserRepository:
         db.session.add(new_user)
         db.session.commit()
         return new_user
+
+@staticmethod
+def get_user_by_email(email: str) -> User:
+    """
+    Obtém um usuário pelo seu email.
+
+    Args:
+        email (str): O email do usuário a ser buscado.
+
+    Returns:
+        User: O objeto do usuário encontrado, ou None se não encontrado.
+    """
+    return User.query.filter_by(email=email).first()
