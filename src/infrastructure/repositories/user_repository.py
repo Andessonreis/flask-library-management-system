@@ -1,4 +1,4 @@
-from src.infrastructure.database.sqlalchemy import db
+from src.infrastructure.database.database_setup import db
 from src.domain.User import User
 
 class UserRepository:
