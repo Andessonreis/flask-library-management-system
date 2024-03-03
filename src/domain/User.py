@@ -1,5 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
-from src.infrastructure.database.sqlalchemy import db
+from src.infrastructure.database.database_setup import db
 from dataclasses import dataclass
 from datetime import datetime
 
