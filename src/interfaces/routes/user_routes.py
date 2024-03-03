@@ -1,9 +1,8 @@
-# app/interfaces/routes/user_routes.py
 from flask import jsonify, request
-from src import app
 from src.application.user_service import UserService
-
-@app.route('/users', methods=['POST'])
+from src.infrastructure.database.database_setup import user_bp
+                              
+@user_bp.route('/', methods=['POST'])
 def create_user():
     
     data = request.json
